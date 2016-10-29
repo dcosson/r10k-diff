@@ -25,11 +25,11 @@ module R10kDiff
   class PuppetModule
     def initialize(name, ref:nil, git:nil, forge:nil, tag:nil, commit:nil, branch:nil)
       @name = name
-      @ref = ref
+      @ref = tag || commit || branch || ref
       @git = git
       @forge = forge
     end
-    attr_reader :name, :ref, :tag, :commit, :branch
+    attr_reader :name, :ref
 
     def git?
       !!@git
