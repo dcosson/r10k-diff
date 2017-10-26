@@ -23,7 +23,7 @@ module R10kDiff
   end
 
   class PuppetModule
-    def initialize(name, ref:nil, git:nil, forge:nil, tag:nil, commit:nil, branch:nil)
+    def initialize(name, ref:nil, git:nil, forge:nil, tag:nil, commit:nil, branch:nil, install_path:nil, local:nil)
       @name = name
       @ref = ref
       @git = git
